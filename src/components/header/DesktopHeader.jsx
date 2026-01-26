@@ -51,7 +51,7 @@ const DesktopHeader = () => {
                 </Box>
             </Box>
             <Box>
-                <TextField variant='outlined' placeholder='search our store' sx={{'& .MuiOutlinedInput-root': {borderRadius: 10, px: 2, width: 350}}}/>
+                <TextField variant='outlined' placeholder='search our store' sx={{'& .MuiOutlinedInput-root': {borderRadius: 10, px: 2, width: 350, boxShadow: 1}}}/>
             </Box>
             <Box sx={{display: 'flex', alignItems: 'center', gap: 2}}>
                 <Box>
