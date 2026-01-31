@@ -1,4 +1,4 @@
-import { Box, Button, ButtonGroup, Grid, Stack, Typography } from "@mui/material";
+import { Box, Button, ButtonGroup, Grid, IconButton, Stack, TextField, Typography } from "@mui/material";
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
 import WalletIcon from '@mui/icons-material/Wallet';
@@ -11,14 +11,16 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import SendIcon from '@mui/icons-material/Send';
+import PaymentLogo from '../../assets/icons/sslcom 1.png'
 
 const Footer = () => {
     const date = new Date();
     const year = date.getFullYear();
     return (
     <Box>
-    <Grid container sx={{justifyContent: 'space-between', px: 10, backgroundColor: '#57FF98', py: 3}}>
-        <Grid item xs={12} md={4} sx={{display: 'flex', alignItems: 'center', gap: 1}}>
+    <Grid container spacing={{xs: 1, md: 5}} sx={{justifyContent: {md: 'center'}, px: {md: 10, xs: 1}, py: 3, backgroundColor: {md: '#57FF98', xs: '#FFFFFF'}}}>
+        <Grid item xs={12} md={4} sx={{display: 'flex', alignItems: 'center', gap: 1, backgroundColor: '#57FF98', p: {xs: 5, md: 0}}}>
         <StorefrontIcon sx={{fontSize: 50}}/>
         <Box>
         <Typography variant="p" component='p' sx={{fontWeight: 700}}>
@@ -29,7 +31,7 @@ const Footer = () => {
         </Typography>
         </Box>
         </Grid>
-        <Grid item xs={12} md={4} sx={{display: 'flex', alignItems: 'center', gap: 1}}>
+        <Grid item xs={12} md={4} sx={{display: 'flex', alignItems: 'center', gap: 1, backgroundColor: '#57FF98', p: {xs: 5, md: 0}}}>
         <CurrencyExchangeIcon sx={{fontSize: 50}}/>
         <Box>
         <Typography variant="p" component='p' sx={{fontWeight: 700}}>
@@ -40,7 +42,7 @@ const Footer = () => {
         </Typography>
         </Box>            
         </Grid>
-        <Grid item xs={12} md={4} sx={{display: 'flex', alignItems: 'center', gap: 1}}>
+        <Grid item xs={12} md={4} sx={{display: 'flex', alignItems: 'center', gap: 1, backgroundColor: '#57FF98', p: {xs: 5, md: 0}}}>
         <WalletIcon sx={{fontSize: 50}}/>
         <Box>
         <Typography variant="p" component='p' sx={{fontWeight: 700}}>
@@ -51,7 +53,7 @@ const Footer = () => {
         </Typography>
         </Box>            
         </Grid>
-        <Grid item xs={12} md={4} sx={{display: 'flex', alignItems: 'center', gap: 1}}>
+        <Grid item xs={12} md={4} sx={{display: 'flex', alignItems: 'center', gap: 1, backgroundColor: '#57FF98', p: {xs: 5, md: 0}}}>
         <CardGiftcardIcon sx={{fontSize: 50}}/>
         <Box>
         <Typography variant="p" component='p' sx={{fontWeight: 700}}>
@@ -60,7 +62,7 @@ const Footer = () => {
         <Typography variant="p" component='p'>
             over all of the orders
         </Typography>
-        </Box>            
+        </Box>
         </Grid>
     </Grid>
 
@@ -149,6 +151,25 @@ const Footer = () => {
 
     <Button variant='text' to='/' component={Link} sx={{justifyContent: 'flex-start', p: 0, color: 'black', textTransform: 'capitalize', '&:hover': {color: 'green', backgroundColor: 'transparent'}}}>Compare</Button>
         </Stack>
+    </Box>
+
+    <Box sx={{display: 'flex', flexDirection: 'column'}}>
+        <Typography component='h5' variant="p" sx={{fontSize: 17, mb: 2}}>
+            Newsletter
+        </Typography>
+        <Typography component='p' variant="p" sx={{fontSize: 15, mb: 2}}>
+            Subscribe to our weekly Newsletter and receive updates via email.
+        </Typography>
+        <Box sx={{display: 'flex', alignItems: 'center', gap: 1}}>
+        <TextField></TextField>
+        <IconButton sx={{backgroundColor: 'black', borderRadius: 0, p: 2, '&:hover':{backgroundColor: 'black'}}}>
+        <SendIcon sx={{color: 'white', transform: 'rotate(-45deg)'}}/>
+        </IconButton>
+        </Box>
+        <Typography variant="p" component='p' sx={{my: 2, fontWeight: 600}}>
+            We Accept
+        </Typography>
+        <Box component='img' src={PaymentLogo} sx={{width: '100%'}}/>
     </Box>
 
 </Box>
