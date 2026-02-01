@@ -19,10 +19,10 @@ const Footer = () => {
     const year = date.getFullYear();
     return (
     <Box>
-    <Grid container spacing={{xs: 1, md: 5}} sx={{justifyContent: {md: 'center'}, px: {md: 10, xs: 1}, py: 3, backgroundColor: {md: '#57FF98', xs: '#FFFFFF'}}}>
-        <Grid item xs={12} md={4} sx={{display: 'flex', alignItems: 'center', gap: 1, backgroundColor: '#57FF98', p: {xs: 5, md: 0}}}>
+    <Box sx={{display: 'grid', gridTemplateColumns: {xs: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)', sm: 'repeat(2, 1fr)'}, gap: 2,justifyContent: 'space-between', px: {md: 10, xs: 2}, py: 3, backgroundColor: {md: '#57FF98', xs: '#FFFFFF'}}}>
+        <Box sx={{display: 'flex', alignItems: 'center', gap: 1, backgroundColor: '#57FF98', p: {xs: 5, md: 0}}}>
         <StorefrontIcon sx={{fontSize: 50}}/>
-        <Box>
+        <Box sx={{display: 'flex', flexDirection: 'column'}}>
         <Typography variant="p" component='p' sx={{fontWeight: 700}}>
             Free Shipping
         </Typography>
@@ -30,10 +30,10 @@ const Footer = () => {
             On all orders over $49.00
         </Typography>
         </Box>
-        </Grid>
-        <Grid item xs={12} md={4} sx={{display: 'flex', alignItems: 'center', gap: 1, backgroundColor: '#57FF98', p: {xs: 5, md: 0}}}>
+        </Box>
+        <Box sx={{display: 'flex', alignItems: 'center', gap: 1, backgroundColor: '#57FF98', p: {xs: 5, md: 0}}}>
         <CurrencyExchangeIcon sx={{fontSize: 50}}/>
-        <Box>
+        <Box sx={{display: 'flex', flexDirection: 'column'}}>
         <Typography variant="p" component='p' sx={{fontWeight: 700}}>
             07 days returns
         </Typography>
@@ -41,21 +41,21 @@ const Footer = () => {
             Money back guarantee
         </Typography>
         </Box>            
-        </Grid>
-        <Grid item xs={12} md={4} sx={{display: 'flex', alignItems: 'center', gap: 1, backgroundColor: '#57FF98', p: {xs: 5, md: 0}}}>
+        </Box>
+        <Box sx={{display: 'flex', alignItems: 'center', gap: 1, backgroundColor: '#57FF98', p: {xs: 5, md: 0}}}>
         <WalletIcon sx={{fontSize: 50}}/>
-        <Box>
+        <Box sx={{display: 'flex', flexDirection: 'column'}}>
         <Typography variant="p" component='p' sx={{fontWeight: 700}}>
             Secure checkout
         </Typography>
         <Typography variant="p" component='p'>
             Cash on Delivery Service
         </Typography>
-        </Box>            
-        </Grid>
-        <Grid item xs={12} md={4} sx={{display: 'flex', alignItems: 'center', gap: 1, backgroundColor: '#57FF98', p: {xs: 5, md: 0}}}>
+        </Box>
+        </Box>
+        <Box sx={{display: 'flex', alignItems: 'center', gap: 1, backgroundColor: '#57FF98', p: {xs: 5, md: 0}}}>
         <CardGiftcardIcon sx={{fontSize: 50}}/>
-        <Box>
+        <Box sx={{display: 'flex', flexDirection: 'column'}}>
         <Typography variant="p" component='p' sx={{fontWeight: 700}}>
             Offer & gift here
         </Typography>
@@ -63,8 +63,8 @@ const Footer = () => {
             over all of the orders
         </Typography>
         </Box>
-        </Grid>
-    </Grid>
+        </Box>
+    </Box>
 
 <Box sx={{display: 'grid', gridTemplateColumns: {xs: '1fr', md: 'repeat(5, 1fr)'}, gap: 5, backgroundColor: '#CAFFCE', p: 5}}>
     <Box sx={{display: 'flex', flexDirection: 'column', gap: 1}}>
