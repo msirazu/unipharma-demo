@@ -10,9 +10,7 @@ const HomeLayout = () => {
         <Header />
       </Box>
       <Box component="main">
-        <Container>
           <Outlet />
-        </Container>
       </Box>
       <Box component="footer">
         <Footer />
