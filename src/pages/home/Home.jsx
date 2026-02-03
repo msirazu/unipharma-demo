@@ -24,8 +24,10 @@ const Home = () => {
                 </Box>
             </Box>
 
-            <Box sx={{display: 'grid', gridTemplateColumns: {md: 'repeat(4, 1fr)', xs: 'repeat(2, 1fr)', sm: 'repeat(3, 1fr)'}, gap: 2, mx: 2, my: {xs: 0, md: 2}}} component='section'>
+            <Box component='section' sx={{display: 'flex', justifyContent: 'center'}}>
+            <Box sx={{display: 'grid', gridTemplateColumns: {md: 'repeat(4, 1fr)', xs: 'repeat(2, 1fr)', sm: 'repeat(3, 1fr)'}, gap: 2, mx: 2, my: {xs: 0, md: 2}, maxWidth: '1400px'}}>
                 {allProducts.map(product => <ProductsHome key={product.id} product={product}/>)}
+            </Box>
             </Box>
 
         </Box>
