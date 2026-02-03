@@ -1,7 +1,11 @@
 import { CssBaseline, Box, Button, ButtonGroup } from "@mui/material";
 import { Link } from "react-router-dom";
+import DataContext from "../../auth/context/DataContext";
+import { useContext } from "react";
 
 const Navbar = () => {
+  const {products} = useContext(DataContext);
+  console.log(products);
   return (
     <>
       <CssBaseline />

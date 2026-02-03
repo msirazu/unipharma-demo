@@ -8,6 +8,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Link } from 'react-router-dom';
 
 const DesktopHeader = () => {
     return (
@@ -36,7 +37,7 @@ const DesktopHeader = () => {
         </Box>
 
         <Box component='section' sx={{height: 80, backgroundColor: '#dddddd70', display: 'flex', justifyContent: 'space-between', alignItems: 'center', px: 2}}>
-            <Box>
+            <Box to='/' component={Link}>
                 <Box sx={{width: 150}} component='img' src='https://unipharma.online/_next/image?url=%2Fmain_logo1.png&w=256&q=75'/>
             </Box>
             <Box sx={{display: 'flex', alignItems: 'center', gap: 2}}>
