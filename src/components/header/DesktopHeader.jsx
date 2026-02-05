@@ -56,7 +56,9 @@ const DesktopHeader = () => {
             </Box>
             <Box sx={{display: 'flex', alignItems: 'center', gap: 2}}>
                 <Box>
+                <Box to='/cart' component={Link}>
                 <ShoppingCartIcon/>
+                </Box>
                 <Typography variant='p' component='p' sx={{textTransform: 'capitalize'}}>
                     cart
                 </Typography>
