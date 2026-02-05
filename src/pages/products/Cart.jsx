@@ -16,8 +16,10 @@ const Cart = () => {
         newData();
     }, [products]);
     return (
-        <Box sx={{display: 'flex', flexDirection: 'column', gap: 2, p: 2}}>
+        <Box>
+        <Box component='section' sx={{display: 'flex', flexDirection: 'column', gap: 2, p: 2, maxWidth: '1400px', mx: 'auto'}}>
             {data.map(cartData => <CartDetails key={cartData.id} cartData={cartData}/>)}
+        </Box>
         </Box>
     );
 };

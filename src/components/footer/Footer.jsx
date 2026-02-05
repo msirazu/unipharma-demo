@@ -19,7 +19,7 @@ const Footer = () => {
     const year = date.getFullYear();
     return (
     <Box>
-    <Box sx={{display: 'grid', gridTemplateColumns: {xs: 'repeat(1, 1fr)', md: 'repeat(4, 1fr)', sm: 'repeat(2, 1fr)'}, gap: 2, justifyContent: 'space-between', px: {md: 10, xs: 2}, py: 3, backgroundColor: {md: '#57FF98', xs: '#FFFFFF'}}}>
+    <Box sx={{display: 'grid', gridTemplateColumns: {xs: 'repeat(1, 1fr)', md: 'repeat(4, 1fr)', sm: 'repeat(2, 1fr)'}, gap: 2, justifyContent: 'space-between', px: {md: 10, xs: 2}, pb: 2, backgroundColor: {md: '#57FF98', xs: '#FFFFFF'}}}>
         <Box sx={{display: 'flex', alignItems: 'center', gap: 1, backgroundColor: '#57FF98', p: {xs: 5, md: 0}}}>
         <StorefrontIcon sx={{fontSize: 50}}/>
         <Box sx={{display: 'flex', flexDirection: 'column'}}>

@@ -16,7 +16,9 @@ const MobileHeader = () => {
         <Box sx={{gap: 2, display: 'flex'}}>
           <SearchIcon/>
           <PersonIcon/>
-          <ShoppingCartIcon/>
+          <Box to='/cart' component={Link}>
+          <ShoppingCartIcon sx={{color: '#000000'}}/>
+          </Box>
           <MenuIcon/>
         </Box>
       </Box>
