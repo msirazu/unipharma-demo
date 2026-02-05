@@ -21,4 +21,11 @@ const saveToLocalStorageDB = (id) => {
     return true;
 }
 
-export {saveToLocalStorageDB, getFromLocalStorage};
+const removeFromLocalStorage = (id) => {
+    const storedCartProducts = getFromLocalStorage();
+    const updatedCart = storedCartProducts.filter(itemId => itemId !== id);
+    const data = JSON.stringify(updatedCart);
+    localStorage.setItem('unipharmaCart', data);
+}
+
+export {saveToLocalStorageDB, getFromLocalStorage, removeFromLocalStorage};
