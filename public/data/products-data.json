@@ -62,5 +62,37 @@
     "category" : "medicine",
     "subCategory" : "ayurvedic",
     "brand" : "index laboratories ltd"
+    },
+    {
+    "id" : 5,
+    "name": "vegan high protein",
+    "price": 2200,
+    "priceDes" : 2000,
+    "quantity" : 1.6,
+    "quantityType" : "kg",
+    "imageUrl" : "https://unipharma.online/_next/image?url=https%3A%2F%2Fdigitalseba.s3.ap-southeast-1.amazonaws.com%2F1768730263214_vegan-high-protein-3.png&w=640&q=75",
+    "sku": "DS-VEGA-14VD",
+    "stock": 50,
+    "desShort" : "Vegan High Protein",
+    "desLong" : "Vegan High Protein",
+    "category" : "medicine",
+    "subCategory" : "herbal",
+    "brand" : "green nutrition foods"
+    },
+    {
+    "id" : 6,
+    "name": "barley flour",
+    "price": 1500,
+    "priceDes" : 1000,
+    "quantity" : 1.5,
+    "quantityType" : "kg",
+    "imageUrl" : "https://unipharma.online/_next/image?url=https%3A%2F%2Fdigitalseba.s3.ap-southeast-1.amazonaws.com%2F1768730085244_Barley-Flour-4.png&w=640&q=75",
+    "sku": "DS-BARL-4H8L",
+    "stock": 50,
+    "desShort" : "Barley Flour",
+    "desLong" : "Barley Flour",
+    "category" : "medicine",
+    "subCategory" : "herbal",
+    "brand" : "green nutrition foods"
     }
 ]

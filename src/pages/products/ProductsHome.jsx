@@ -5,7 +5,7 @@ import { saveToLocalStorageDB } from "../../utilities/addToLocalStorageDB";
 import { toast } from "react-toastify";
 
 const ProductsHome = ({ product }) => {
-    const { name, price, imageUrl, quantity, quantityType, brand, category, subCategory, id } = product;
+    const { name, priceDes, imageUrl, quantity, quantityType, brand, category, subCategory, id } = product;
     const handleAddToCart = (id) => {
         const isAdded = saveToLocalStorageDB(id);
         if (!isAdded) {
@@ -25,6 +25,9 @@ const ProductsHome = ({ product }) => {
                     {`${name} - ${quantity}`}
                     <Typography sx={{textTransform: 'uppercase', ml: 1}} variant='p' component='span'>
                         {`${quantityType.slice(0, 3)}`}
+                    </Typography>
+                    <Typography sx={{display: 'block', mt: '3px'}} component='span' variant="p">
+                        {`৳ ${priceDes}`}
                     </Typography>
                 </Typography>
                 </Box>

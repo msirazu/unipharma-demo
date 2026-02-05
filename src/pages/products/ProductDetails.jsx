@@ -19,14 +19,14 @@ const ProductDetails = () => {
     return <p>Product not found</p>;
     }
 
-    const { name, price, imageUrl, quantity, quantityType, brand, category, subCategory, id, sku, stock } = singleProduct;
+    const { name, price, imageUrl, quantity, quantityType, brand, category, subCategory, id, sku, stock, priceDes } = singleProduct;
 
     return (
         <>
         <Box sx={{display: 'flex', justifyContent: 'center'}}>
         <Container sx={{maxWidth: '1400px', display: 'grid', gridTemplateColumns: {md: 'repeat(3, 1fr)', xs: 'repeat(1, 1fr)'}, gap: 3, mx: {md: 0, xs: 0}, my: {md: 2, xs: 2}}}>
             <Box sx={{gridColumn: {md: 'span 1', xs: 'span 3'}, border: '1px solid #dddddd', borderRadius: 2, display: 'flex', justifyContent: 'center'}}>
-                <Box sx={{maxWidth: '400px'}} component='img' src={imageUrl}/>
+                <Box sx={{maxWidth: '400px', p: 2}} component='img' src={imageUrl}/>
             </Box>
             <Box sx={{gridColumn: {md: 'span 2', xs: 'span 3'}, border: '1px solid #dddddd', p: 5, borderRadius: 2}}>
                 <Box sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: {xs: 'column', sm: 'row'}, gap: 3}}>
@@ -42,7 +42,7 @@ const ProductDetails = () => {
                 </Typography>
                 </Box>
                 <Typography sx={{fontWeight: '700'}} component='h5' variant="h4">
-                    {`৳ ${price}`}
+                    {`৳ ${priceDes}`}
                 </Typography>
                 </Box>
             </Box>
