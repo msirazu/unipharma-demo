@@ -17,7 +17,7 @@ const MobileHeader = () => {
           <IconButton>
           <SearchIcon/>
           </IconButton>
-          <Box to='/dashboard/login' component={Link}><IconButton>
+          <Box to='/dashboard' component={Link}><IconButton>
           <PersonIcon/>
           </IconButton>
           </Box>

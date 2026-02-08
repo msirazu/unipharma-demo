@@ -73,7 +73,7 @@ const DesktopHeader = () => {
                     cart
                 </Typography>
                 </Box>
-                <Box to='/dashboard/login' component={Link}><IconButton>
+                <Box to='/dashboard' component={Link}><IconButton>
                 <PermIdentityIcon/></IconButton>
                 </Box>
             </Box>

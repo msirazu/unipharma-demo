@@ -8,6 +8,7 @@ import DashboardLayout from '../layouts/DashboardLayout';
 import DashboardLogin from '../auth/login/DashboardLogin';
 import DashboardHome from '../pages/dashboard/DashboardHome';
 import PrivateRoutes from './PrivateRoutes';
+import DashboardRegister from '../auth/register/DashboardRegister';
 
 const router = createBrowserRouter([
     {path: '/', element: <HomeLayout/>, children: [
@@ -20,7 +21,8 @@ const router = createBrowserRouter([
     ], hydrateFallbackElement: <CircularColorLoading />},
     {path: '/dashboard', element: <DashboardLayout/>, children: [
         {path: '', element: <PrivateRoutes><DashboardHome/></PrivateRoutes>},
-        {path: 'login', element: <DashboardLogin/>}
+        {path: 'login', element: <DashboardLogin/>},
+        {path: 'register', element: <DashboardRegister/>}
     ]}
 ]);
 

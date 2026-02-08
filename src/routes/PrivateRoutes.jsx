@@ -1,14 +1,19 @@
-import { Box } from "@mui/material";
 import { useContext } from "react";
 import AuthContext from "../auth/context/AuthContext";
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 
 const PrivateRoutes = ({children}) => {
-    const { user } = useContext(AuthContext);
+    const location = useLocation();
+    const { user, userLoading } = useContext(AuthContext);
+
+    if (userLoading) {
+        return <p>loading.....</p>
+    }
+
     if (user) {
         return children;
     }
-    return <Navigate to='/dashboard/login'></Navigate>
+    return <Navigate state={location.pathname} to='/dashboard/login'></Navigate>
 };
 
 export default PrivateRoutes;
