@@ -7,6 +7,7 @@ import Cart from '../pages/products/Cart';
 import DashboardLayout from '../layouts/DashboardLayout';
 import DashboardLogin from '../auth/login/DashboardLogin';
 import DashboardHome from '../pages/dashboard/DashboardHome';
+import PrivateRoutes from './PrivateRoutes';
 
 const router = createBrowserRouter([
     {path: '/', element: <HomeLayout/>, children: [
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
         {path: 'cart', element: <Cart/>}
     ], hydrateFallbackElement: <CircularColorLoading />},
     {path: '/dashboard', element: <DashboardLayout/>, children: [
-        {path: '', element: <DashboardHome/>},
+        {path: '', element: <PrivateRoutes><DashboardHome/></PrivateRoutes>},
         {path: 'login', element: <DashboardLogin/>}
     ]}
 ]);

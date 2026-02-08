@@ -20,9 +20,14 @@ Welcome back! Please sign in to your account
         </Box>
         <Button sx={{height: '50px'}} variant="contained">Sign In</Button>
         </Stack>
+        <Stack justifyContent='space-between' spacing={2} direction='row'>
         <Box sx={{textDecoration: 'none'}} to='/' component={Link}>
-        <Typography component='p' variant='p' sx={{textAlign: 'center', mt: '10px'}}>Back to Home</Typography>
+        <Typography component='p' variant='p' sx={{textAlign: 'center', mt: '10px', fontSize: '15px'}}>Back to Home</Typography>
         </Box>
+        <Box sx={{textDecoration: 'none'}} to='/dashboard' component={Link}>
+        <Typography component='p' variant='p' sx={{textAlign: 'center', mt: '10px', fontSize: '15px'}}>Back to Dashboard</Typography>
+        </Box>
+        </Stack>
         </Box>
     </Box>
     </>
