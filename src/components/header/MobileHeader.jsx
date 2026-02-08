@@ -1,4 +1,4 @@
-import { CssBaseline, Box } from "@mui/material";
+import { CssBaseline, Box, IconButton, Icon } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import PersonIcon from '@mui/icons-material/Person';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
@@ -14,12 +14,20 @@ const MobileHeader = () => {
         <Box sx={{width: 100, height: 15}} component='img' src='https://unipharma.online/_next/image?url=%2Fmain_logo1.png&w=256&q=75'/>
         </Box>
         <Box sx={{gap: 2, display: 'flex'}}>
+          <IconButton>
           <SearchIcon/>
+          </IconButton>
+          <Box to='/dashboard/login' component={Link}><IconButton>
           <PersonIcon/>
-          <Box to='/cart' component={Link}>
-          <ShoppingCartIcon sx={{color: '#000000'}}/>
+          </IconButton>
           </Box>
+          <Box to='/cart' component={Link}>
+          <IconButton>
+          <ShoppingCartIcon sx={{color: '#000000'}}/>
+          </IconButton></Box>
+          <IconButton>
           <MenuIcon/>
+          </IconButton>
         </Box>
       </Box>
     </>

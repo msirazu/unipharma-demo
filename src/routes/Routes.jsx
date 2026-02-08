@@ -4,6 +4,9 @@ import Home from '../pages/home/Home';
 import ProductDetails from '../pages/products/ProductDetails';
 import CircularColorLoading from '../components/loading/CircularColorLoading';
 import Cart from '../pages/products/Cart';
+import DashboardLayout from '../layouts/DashboardLayout';
+import DashboardLogin from '../auth/login/DashboardLogin';
+import DashboardHome from '../pages/dashboard/DashboardHome';
 
 const router = createBrowserRouter([
     {path: '/', element: <HomeLayout/>, children: [
@@ -13,7 +16,11 @@ const router = createBrowserRouter([
         }}, 
         {path: 'product-details/:Id', element: <ProductDetails/>},
         {path: 'cart', element: <Cart/>}
-    ], hydrateFallbackElement: <CircularColorLoading />}
+    ], hydrateFallbackElement: <CircularColorLoading />},
+    {path: '/dashboard', element: <DashboardLayout/>, children: [
+        {path: '', element: <DashboardHome/>},
+        {path: 'login', element: <DashboardLogin/>}
+    ]}
 ]);
 
 export default router;

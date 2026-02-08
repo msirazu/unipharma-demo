@@ -1,4 +1,4 @@
-import { Box, Stack, TextField, Typography } from '@mui/material';
+import { Box, Icon, IconButton, Stack, TextField, Typography } from '@mui/material';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
@@ -29,10 +29,18 @@ const DesktopHeader = () => {
             </Stack>
           </Box>
           <Box sx={{display: 'flex', alignItems: 'center', gap: 2}}>
+            <IconButton>
             <YouTubeIcon sx={{color: 'black', ':hover': {color: 'green', cursor: 'pointer'}}}/>
+            </IconButton>
+            <IconButton>
             <FacebookIcon sx={{color: 'black', ':hover': {color: 'green', cursor: 'pointer'}}}/>
+            </IconButton>
+            <IconButton>
             <TwitterIcon sx={{color: 'black', ':hover': {color: 'green', cursor: 'pointer'}}}/>
+            </IconButton>
+            <IconButton>
             <LinkedInIcon sx={{color: 'black', ':hover': {color: 'green', cursor: 'pointer'}}}/>
+            </IconButton>
           </Box>
         </Box>
 
@@ -57,13 +65,17 @@ const DesktopHeader = () => {
             <Box sx={{display: 'flex', alignItems: 'center', gap: 2}}>
                 <Box>
                 <Box to='/cart' component={Link}>
-                <ShoppingCartIcon/>
+                <IconButton>
+                    <ShoppingCartIcon/>
+                </IconButton>
                 </Box>
                 <Typography variant='p' component='p' sx={{textTransform: 'capitalize'}}>
                     cart
                 </Typography>
                 </Box>
-                <PermIdentityIcon/>
+                <Box to='/dashboard/login' component={Link}><IconButton>
+                <PermIdentityIcon/></IconButton>
+                </Box>
             </Box>
         </Box>
         </>

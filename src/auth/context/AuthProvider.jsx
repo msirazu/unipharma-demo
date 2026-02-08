@@ -2,8 +2,10 @@ import AuthContext from "./AuthContext";
 
 const AuthProvider = ({ children }) => {
 
+    const user = true;
+
     const userInfo = {
-        email: 'a@b.com'
+        user,
     }
 
     return (
