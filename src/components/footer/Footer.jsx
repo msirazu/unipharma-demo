@@ -91,10 +91,10 @@ const Footer = () => {
             </Typography>
         </Box>
         <Box sx={{display: 'flex', alignItems: 'center', gap: 1}}>
-           <YouTubeIcon sx={{'&:hover': {color: 'green', cursor: 'pointer'}}}/>
-           <FacebookIcon sx={{'&:hover': {color: 'green', cursor: 'pointer'}}}/>
-           <TwitterIcon sx={{'&:hover': {color: 'green', cursor: 'pointer'}}}/>
-           <LinkedInIcon sx={{'&:hover': {color: 'green', cursor: 'pointer'}}}/>
+           <YouTubeIcon sx={{color:'black', '&:hover': {color: 'green', cursor: 'pointer'}}}/>
+           <FacebookIcon sx={{color:'black', '&:hover': {color: 'green', cursor: 'pointer'}}}/>
+           <TwitterIcon sx={{color:'black', '&:hover': {color: 'green', cursor: 'pointer'}}}/>
+           <LinkedInIcon sx={{color:'black', '&:hover': {color: 'green', cursor: 'pointer'}}}/>
         </Box>
     </Box>
 

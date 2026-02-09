@@ -35,7 +35,7 @@ Welcome back! Please sign in to your account
         <TextField name='email' type='email' label='Email' placeholder="enter your email"/>
         <TextField name='password' type='password' label="Password" placeholder="enter your password"/>
         <Stack justifyContent='space-between' spacing={2} direction='row'>
-        <Box sx={{textDecoration: 'none'}} to='/dashboard/register' component={Link}>
+        <Box sx={{textDecoration: 'none'}} to='/dashboard/auth/register' component={Link}>
         <Typography component='p' variant='p' sx={{textAlign: 'center', fontSize: '13px', textTransform: 'capitalize'}}>register</Typography>
         </Box>
         <Box sx={{textDecoration: 'none'}} to='' component={Link}>

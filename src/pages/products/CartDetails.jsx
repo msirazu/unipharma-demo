@@ -4,7 +4,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 const CartDetails = ({ cartData, handleDelete }) => {
 const { name, price, imageUrl, quantity, quantityType, brand, category, subCategory, id, sku, stock } = cartData;
     return (
-        <Box sx={{display: 'grid', border: '1px solid #dddddd', gap: 5, alignItems: 'center', p: 1, gridTemplateColumns: 'repeat(5, 1fr)', justifyContent: 'center'}}>
+        <Box sx={{display: 'grid', border: '1px solid #dddddd', gap: 2, alignItems: 'center', p: 1, gridTemplateColumns: 'repeat(5, 1fr)', justifyContent: 'center'}}>
             <Box sx={{gridColumn: 'span 1'}}>
             <Box sx={{width: '100px', backgroundColor: '#dddddd30', borderRadius: '10px'}} component='img' src={imageUrl}/>
             </Box>

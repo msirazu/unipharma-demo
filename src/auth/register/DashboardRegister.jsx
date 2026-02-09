@@ -54,8 +54,8 @@ Register your account
         <Button type="submit" sx={{height: '50px'}} variant="contained">register</Button>
         </Stack></form>
         <Stack justifyContent='space-between' spacing={2} direction='row'>
-        <Box sx={{textDecoration: 'none'}} to='/' component={Link}>
-        <Typography component='p' variant='p' sx={{textAlign: 'center', mt: '10px', fontSize: '13px'}}>Back to Home</Typography>
+        <Box sx={{textDecoration: 'none'}} to='/dashboard/auth/login' component={Link}>
+        <Typography component='p' variant='p' sx={{textAlign: 'center', mt: '10px', fontSize: '13px'}}>Login</Typography>
         </Box>
         <Box sx={{textDecoration: 'none'}} to='/dashboard' component={Link}>
         <Typography component='p' variant='p' sx={{textAlign: 'center', mt: '10px', fontSize: '13px'}}>Back to Dashboard</Typography>
