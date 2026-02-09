@@ -6,7 +6,7 @@ import AuthContext from "../context/AuthContext";
 const DashboardRegister = () => {
     const [message, setMessage] = useState('');
     const [errorMsg, setErrorMsg] = useState('');
-    const {createUser, setUser} = useContext(AuthContext);
+    const {createUser, setUser, updateUser} = useContext(AuthContext);
     const handleRegister = (e) => {
         e.preventDefault();
         const name = e.target.name.value;
@@ -16,12 +16,17 @@ const DashboardRegister = () => {
         createUser(email, password)
         .then(result => {
             const newUser = result.user;
-            setUser(newUser);
+            updateUser({displayName: name, photoURL: photo}).then(() => {
+            setUser({...newUser, displayName: name, photoURL: photo});
             setMessage('user created success');
             e.target.name.value = '';
             e.target.photo.value = '';
             e.target.email.value = '';
             e.target.password.value = '';
+            }).catch((error) => {
+                console.log(error)
+                setUser(newUser);
+            })
         }).catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;

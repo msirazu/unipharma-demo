@@ -26,6 +26,7 @@ const removeFromLocalStorage = (id) => {
     const updatedCart = storedCartProducts.filter(itemId => itemId !== id);
     const data = JSON.stringify(updatedCart);
     localStorage.setItem('unipharmaCart', data);
+    return updatedCart;
 }
 
 export {saveToLocalStorageDB, getFromLocalStorage, removeFromLocalStorage};
