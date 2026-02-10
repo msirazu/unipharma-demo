@@ -6,7 +6,7 @@ const DashboardHeader = () => {
         const { user, logOutUser } = useContext(AuthContext);
     return (
         <>
-        <Stack direction='row' justifyContent='space-around' alignItems='center'>
+        <Stack direction='row' justifyContent='space-around' alignItems='center' sx={{p: 2}}>
             <Typography>
             email: {user.email}
             </Typography>
@@ -15,7 +15,7 @@ const DashboardHeader = () => {
             </Typography>
             <Box component='img' src={user.photoURL}/>
             {user && <Button onClick={() => logOutUser()} variant="contained">signout</Button>} 
-            </Stack>    
+            </Stack>
         </>
     );
 };

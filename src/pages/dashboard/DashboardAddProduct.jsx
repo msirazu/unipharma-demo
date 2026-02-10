@@ -36,6 +36,11 @@ const DashboardAddProduct = () => {
 
         setName('');setImage('');setRegPrice('');setDisPrice('');setSlug('');setTypeQuantity('');setStockQuantity('');setCategory('');setSubCategory('');setBrand('');
     }
+
+    const handleReset = () => {
+        setName('');setImage('');setRegPrice('');setDisPrice('');setSlug('');setTypeQuantity('');setStockQuantity('');setCategory('');setSubCategory('');setBrand('');
+    }
+
     return (
         <>
         <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#dddddd30'}}>
@@ -72,7 +77,7 @@ const DashboardAddProduct = () => {
             </Stack>
             <Stack direction='row' spacing={1}>
             <Button sx={{py: 2, width: '50%'}} type="submit" variant="contained">save</Button>
-            <Button sx={{py: 2, width: '50%'}} type="reset" variant="contained">clear</Button>
+            <Button sx={{py: 2, width: '50%'}} onClick={handleReset} variant="contained">clear</Button>
             </Stack>
             </Stack>
             </form>

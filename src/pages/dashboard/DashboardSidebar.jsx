@@ -19,7 +19,7 @@ const DashboardSidebar = () => {
             <Button variant="text" to='/dashboard' component={Link}>
                 edit product
             </Button>
-            <Button variant="text" to='/dashboard' component={Link}>
+            <Button variant="text" to='/dashboard/manage-product' component={Link}>
                 manage product
             </Button>
             </ButtonGroup>

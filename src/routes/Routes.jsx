@@ -11,6 +11,7 @@ import PrivateRoutes from './PrivateRoutes';
 import DashboardRegister from '../auth/register/DashboardRegister';
 import AuthLayout from '../layouts/AuthLayout';
 import DashboardAddProduct from '../pages/dashboard/DashboardAddProduct';
+import DashboardProductsList from '../pages/dashboard/DashboardProductsList';
 
 const router = createBrowserRouter([
     {path: '/', element: <HomeLayout/>, children: [
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
     {path: 'dashboard', element: <PrivateRoutes><DashboardLayout/></PrivateRoutes>, children: [
         {path: '', element: <DashboardHome/>},
         {path: 'add-product', element: <DashboardAddProduct/>},
+        {path: 'manage-product', element: <DashboardProductsList/>},
     ]},
     {path: 'dashboard/auth', element: <AuthLayout/>, children: [
         {path: 'login', element: <DashboardLogin/>},
