@@ -10,6 +10,7 @@ import DashboardHome from '../pages/dashboard/DashboardHome';
 import PrivateRoutes from './PrivateRoutes';
 import DashboardRegister from '../auth/register/DashboardRegister';
 import AuthLayout from '../layouts/AuthLayout';
+import DashboardAddProduct from '../pages/dashboard/DashboardAddProduct';
 
 const router = createBrowserRouter([
     {path: '/', element: <HomeLayout/>, children: [
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
     ], hydrateFallbackElement: <CircularColorLoading />},
     {path: 'dashboard', element: <PrivateRoutes><DashboardLayout/></PrivateRoutes>, children: [
         {path: '', element: <DashboardHome/>},
+        {path: 'add-product', element: <DashboardAddProduct/>},
     ]},
     {path: 'dashboard/auth', element: <AuthLayout/>, children: [
         {path: 'login', element: <DashboardLogin/>},
